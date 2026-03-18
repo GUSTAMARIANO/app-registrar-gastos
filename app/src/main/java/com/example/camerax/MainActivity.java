@@ -9,14 +9,14 @@ import android.provider.MediaStore;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
-import android.graphics.Matrix;
+
 
 import java.io.File;
 
@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
 
                     if (result.getResultCode() == RESULT_OK) {
 
-                        Intent data = result.getData();
-                            texto.setText("teste");
+                        //Intent data = result.getData();
+                            //texto.setText("teste");
                             Bitmap bitmap = BitmapFactory.decodeFile(photoFile.getAbsolutePath());
                             imageView.setImageBitmap(bitmap);
 
