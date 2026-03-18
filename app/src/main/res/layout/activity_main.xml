@@ -32,17 +32,17 @@
 
     <ImageView
         android:id="@+id/imageview1"
-        android:layout_width="wrap_content"
-        android:layout_height="190dp"
+        android:layout_width="274dp"
+        android:layout_height="244dp"
         android:layout_below="@+id/btncamera_id"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="50dp"
 
-        android:layout_marginTop="197dp"
-        android:layout_marginEnd="94dp"
-        android:layout_marginBottom="278dp"
+        android:layout_marginTop="171dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="249dp"
         android:background="#00D0C7C7"
         android:contentDescription="TODO" />
 </RelativeLayout>
