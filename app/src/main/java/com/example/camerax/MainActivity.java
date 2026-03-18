@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 photoFile
         );
 
-        //Ativação do método após o evento de click
+        //Ativação do metodo após o evento de click
         btnpicture.setOnClickListener(v -> {
             Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
