@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnpicture;
     ImageView imageView;
-    TextView texto;
 
     ActivityResultLauncher<Intent> cameraLauncher;
 
@@ -36,8 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
         btnpicture = findViewById(R.id.btncamera_id);
         imageView = findViewById(R.id.imageview1);
-        texto = findViewById(R.id.text);
 
+
+        //------------------------------------------------------------------------------
 
         //Variavéis responsaveis por armazena a foto
         File photoFile = new File(getExternalFilesDir(null), "photo.jpg");
@@ -64,12 +64,16 @@ public class MainActivity extends AppCompatActivity {
                     if (result.getResultCode() == RESULT_OK) {
 
                         //Intent data = result.getData();
-                            //texto.setText("teste");
+
                             Bitmap bitmap = BitmapFactory.decodeFile(photoFile.getAbsolutePath());
                             imageView.setImageBitmap(bitmap);
 
                     }
                 }
         );
+
+        //---------------------------------------------------------------------------------
+
+
     }
 }
