@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">CameraX</string>
+    <string-array name="categorias">
+        <item>Almoço</item>
+        <item>Janta</item>
+        <item>Café da Manhã</item>
+        <item>Fármacia</item>
+
+    </string-array>
 </resources>
