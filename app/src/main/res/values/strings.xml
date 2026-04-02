@@ -1,10 +1,32 @@
 <resources>
-    <string name="app_name">CameraX</string>
+    <string name="app_name">Maranguape</string>
     <string-array name="categorias">
-        <item>Almoço</item>
-        <item>Janta</item>
-        <item>Café da Manhã</item>
-        <item>Fármacia</item>
+
+        <item></item>
+        <item>Alimentação</item>
+        <item>Combustível</item>
+        <item>Remédio</item>
+        <item>Hospedagem</item>
+        <item>Pedágio</item>
+        <item>Transporte</item>
+        <item>Outros</item>
 
     </string-array>
+
+    <string-array name="metodo_pagamento">
+
+        <item></item>
+        <item>Crédito</item>
+        <item>Débito</item>
+        <item>Pix</item>
+        <item>Espécie</item>
+
+    </string-array>
+
+    <string name="button_entar">Entrar</string>
+    <string name="criar_conta">Clique aqui para criar uma conta</string>
+    <string name="nome">Nome</string>
+    <string name="cadastro">Cadastre-se</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
 </resources>

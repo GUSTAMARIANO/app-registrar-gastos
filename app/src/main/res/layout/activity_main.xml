@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    android:background="@drawable/login_background"
     tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/container_registro"
+        style="@style/container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
 
     <Button
         android:id="@+id/btncamera_id"
@@ -17,11 +26,13 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="586dp"
-        android:layout_marginBottom="78dp"
-        android:text="Tirar foto" />
+        android:text="Tirar foto"
+        android:layout_marginTop="15dp"
 
+        app:layout_constraintTop_toBottomOf="@id/imageview1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+         />
 
     <ImageView
         android:id="@+id/imageview1"
@@ -29,18 +40,101 @@
         android:layout_height="210dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="95dp"
-        android:layout_marginBottom="185dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_marginTop="15dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spPagamentos"
+         />
 
     <Spinner
         android:id="@+id/spCategorias"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:entries="@array/categorias"
+        android:layout_width="270dp"
+        android:layout_height="48dp"
         android:layout_above="@+id/imageview1"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="155dp"
-        android:layout_marginBottom="109dp" />
+        android:background="#F0EBEB"
+        android:entries="@array/categorias"
 
-</RelativeLayout>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Selecione uma categoria:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/container_registro"
+        />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Observações:"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spCategorias"
+        />
+
+    <EditText
+        android:id="@+id/editText_obs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="15"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView3"
+         />
+
+    <Spinner
+        android:id="@+id/spPagamentos"
+        android:layout_width="270dp"
+        android:layout_height="48dp"
+        android:layout_above="@+id/imageview1"
+        android:layout_alignParentEnd="true"
+        android:background="#F0EBEB"
+        android:entries="@array/metodo_pagamento"
+        android:layout_margin="20dp"
+
+
+        app:layout_constraintTop_toBottomOf="@+id/txt1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/txt1"
+        android:text="Meio de Pagamento:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText_obs"
+        />
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
